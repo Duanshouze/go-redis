@@ -24,6 +24,7 @@ var (
 )
 
 var timers = sync.Pool{
+	// I can not find where the Get() method of this return object
 	New: func() interface{} {
 		t := time.NewTimer(time.Hour)
 		t.Stop()
